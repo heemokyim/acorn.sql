@@ -1,0 +1,101 @@
+@c:\oraclexe\app\oracle\product\11.2.0\server\rdbms\admin\scott.sql
+
+@c:\oraclexe\app\oracle\product\11.2.0\server\rdbms\admin\scott.sql
+
+@c:\oraclexe\app\oracle\product\11.2.0\server\rdbms\admin\scott.sql
+
+실행
+cmd
+sqlplus
+system
+1111
+@c:\oraclexe\app\oracle\product\11.2.0\server\rdbms\admin\scott.sql
+-- 계정 scott의 비밀번호를 tiger로 만든다...
+alter user scott idenified by tiger;
+-- scott계정에 비밀번호를 tiger로 오라클서버에 접속합니다.
+-- 서버에서는 해당계정과 비밀번호가 일치시에 접속을 허용합니다.
+conn scott/tiger
+select * from emp;
+
+select * 
+from dept
+where deptno=10;
+-- 부서별 평균연봉
+select deptno, avg(sal)
+from emp
+group by deptno;
+-- 전체평균 연봉
+select avg(sal)
+from emp;
+-- 연봉이 높은 순으로
+-- 출력처리..
+select *
+from emp
+order by sal desc;
+-- desc[ribe] : 테이블구조
+desc emp;
+desc bonus;
+select * 
+from emp;
+select empno, ename, sal
+from emp;
+-- 명령문과 컬럼명, 테이블
+-- 대소문자 구분하지 않음.
+SELECT empno, JOB, deptno,
+       mgr, sal
+FROM EMP;
+select deptno
+from emp;
+-- 특정하게 중복된 데이터를
+-- 제거하여, 중복되지 않게
+-- 출력할 때, distinct 활용
+select distinct deptno
+from emp;
+-- 별칭을 사용할 때,
+-- 컬럼명[한칸] 별칭명,
+-- 컬럼명 as 별칭명
+select empno no, 
+       ename as name
+from emp;
+-- 별칭으로 특수문자/한글
+-- 입력하거나, 공백을 넣을
+-- 때는 ""로 처리할 수 있다.
+select empno "사원 번호",
+       job "#급 여#"
+from emp;
+-- 컬럼의 문자열 연결처리는
+-- || 이용한다..
+-- @@@@ - @@@@
+select ename || ' - ' || empno
+       as "이름과 사번"
+ from emp;
+-- 연습 예제
+-- 사번 @@@ 의 이름은 @@@ 입니다.
+
+-- eclipse
+https://www.eclipse.org/downloads/
+
+help --> eclipse market place
+svn
+Subclipse 4.2.3
+restart 후,
+window --> show view -->
+other --> SVN --> SVN Repositories
+추가 
+https://192.168.0.23/svn/db
+Accept Permantly
+username : future
+password : 7777
+save password check
+mysql -uroot -pxdr5tgb test < C:\Users\acorn\eclipse-workspace\db\src\db\sample.dump
+C:\Users\acorn\eclipse-workspace\db\src\db\sample.dump
+Oracle Database Tools
+DBeaver 5.0.1
+
+
+
+
+
+
+
+
